@@ -1,0 +1,72 @@
+The end goal is to create a dashboard where users can connect multiple APIs together. The response from one API will be used as input for the next API. For example, you get user data from one API and use that data to create a new post with another API. The application should visually show how the data flows between these APIs and allow the user to set it up in an easy way.
+
+Create a responsive web application that demonstrates your ability to handle complex API
+interactions, including both GET and POST requests. You'll build a dashboard that chains
+multiple API calls together, where the response from one API must be used as a parameter or in
+the request body of subsequent API requests. This assignment tests your understanding of
+asynchronous operations, state management, data transformation, and handling different HTTP
+methods.
+
+Requirements
+Technical Stack
+- React.js
+- Tailwind CSS for styling
+- REST API integration
+- MAKE IT AESTHETIC
+Core Requirements
+1. API Chaining Implementation
+- Implement a visual workflow builder that allows users to:
+- Select an initial API to call
+- Choose which response field(s) to use in subsequent API calls
+- Transform data between requests when necessary
+- Chain multiple APIs together by mapping response data to request parameters or
+body
+
+- Display the data flow between APIs visually
+2. User Interface
+- Create an intuitive interface for building API chains
+- Provide a way to input required POST body data
+- Make the UI responsive
+
+1
+
+- Implement a clean, professional design
+Technical Requirements
+- Implement proper state management
+- Write clean, well-documented code
+- Include error handling and loading states
+- Make the application responsive
+Sample APIs
+For this assignment, use the following mock APIs:
+1. Get Users List
+GET https://jsonplaceholder.typicode.com/users
+Response: Array of user objects with id, name, email
+2. Create New Post
+POST https://jsonplaceholder.typicode.com/posts
+Request Body: {
+title: string,
+body: string,
+userId: number
+}
+Response: Created post object with id, title, body, userId
+3. Get Comments by Post
+GET https://jsonplaceholder.typicode.com/comments?postId={postId}
+Required Parameter: postId
+Response: Array of comment objects
+
+2
+
+Evaluation Criteria
+1. Functionality
+- Correct implementation of API chaining
+- Proper handling of both GET and POST requests
+- Data transformation between requests
+- Error handling and edge cases
+2. Code Quality
+- Clean, maintainable code
+- Proper component structure
+- Effective state management
+3. User Interface
+- Intuitive design for handling different request types
+- Responsive layout
+- Visual representation of API chains
